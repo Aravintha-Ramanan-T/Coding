@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration</title>
+</head>
+
+<script type="text/javascript">
+	function myFunction() {
+		var user1 = document.getElementById("uname").value;
+		var pd1 = document.getElementById("pwd").value;
+		var cpd1 = document.getElementById("cpwd").value;
+		
+		var user = user1.trim();
+		var pd = pd1.trim();
+		var cpd = cpd1.trim();
+		
+		if (user == "" && pd == "") {
+			alert("Please enter the user name and password");
+			return false;
+		}
+		if (user == "") {
+			alert("Please enter the user name");
+			return false;
+		}
+		if (pd == "") {
+			alert("Please enter the password");
+			return false;
+		}
+		if (cpd == "") {
+			alert("Please confirm your password");
+			return false;
+		}
+		if (pd != cpd) {
+			alert("Password Mismatch");
+			return false;
+		}
+	}
+</script>
+
+<body>
+	<h2 align="center">Registration Form</h2>
+	<form align="center" action="Register" onsubmit="return myFunction()"
+		method="post">
+		User Name<input type="text" id="uname" name="uname" /><br>
+		<br> Password<input type="password" id="pwd" name="pwd" /><br>
+		<br> Confirm Password <input type="password" id="cpwd"
+			name="cpwd" /><br>
+		<br> <input type="submit" />
+	</form>
+
+
+</body>
+</html>

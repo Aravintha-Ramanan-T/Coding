@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+</head>
+
+<script type="text/javascript">
+	function myFunction() {
+		var user1 = document.getElementById("nam").value;
+		var pd1 = document.getElementById("pwd").value;
+		
+		
+		var user = user1.trim();
+		var pd = pd1.trim();
+		
+		
+		if (user == "" && pd == "") {
+			alert("Please enter the user name and password");
+			return false;
+		}
+		if (user == "") {
+			alert("Please enter the user name");
+			return false;
+		}
+		if (pd == "") {
+			alert("Please enter the password");
+			return false;
+		}
+		
+	}
+</script>
+
+<body>
+	<form align="center" action="Login" onsubmit="return myFunction()"
+		method="post">
+		<h2>Login Form</h2>
+		User Name<input type="text" id="nam" name="nam" /> <br>
+		<br> Password<input type="password" id="pwd" name="pwd" /><br>
+		<br> <input type="submit" />
+	</form>
+</body>
+</html>
