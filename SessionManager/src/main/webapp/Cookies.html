@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<input id="jsInput" type="text" />
+<button onclick="runCode()">submit</button>
+
+<script>
+  function runCode() {
+    const code = document.getElementById("jsInput").value;
+    try {
+      eval(code);
+    } catch (e) {
+      alert("Error: " + e);
+    }
+  }
+</script>
+</body>
+</html>
